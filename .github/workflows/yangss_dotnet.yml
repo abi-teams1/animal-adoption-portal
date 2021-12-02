@@ -1,10 +1,10 @@
-name: .NET
+name: yangss
 
 on:
   push:
     branches: [ yangss ]
   pull_request:
-    branches: [ yangss ]
+    branches: [ master ]
 
 jobs:
   build:
