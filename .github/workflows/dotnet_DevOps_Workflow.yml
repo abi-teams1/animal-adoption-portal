@@ -3,8 +3,6 @@ name: DevOps_Workflow
 on:
   push:
     branches: [ DevOps_Branch_01 ]
-  pull_request:
-    branches: [ DevOps_Branch_01 ]
 
 jobs:
   build:
