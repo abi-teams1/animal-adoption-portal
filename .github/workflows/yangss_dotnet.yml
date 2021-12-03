@@ -3,8 +3,8 @@ name: yangss
 on:
   push:
     branches: [ yangss ]
-  pull_request:
-    branches: [ yangss ]
+#  pull_request:
+#    branches: [ yangss ]
 
 jobs:
   build:
