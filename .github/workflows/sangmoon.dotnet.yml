@@ -42,3 +42,19 @@ jobs:
 
     - name: Push package to GitHub registry
       run: dotnet nuget push ${{ env.LogicProjectPath }}/**/*.nupkg --skip-duplicate
+      
+    - name: Dotnet Restore
+      run: dotnet restore 
+      
+    - name: Publish
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/animal-adoption-portal
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.3
+      with:
+      # Artifact name
+        name: TestArtifect
+       # A file, directory or wildcard pattern that describes what to upload
+        path: ${{env.DOTNET_ROOT}}/animal-adoption-portal/*
+       # The desired behavior if no files are found using the provided path.
+      
