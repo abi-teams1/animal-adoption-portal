@@ -1,4 +1,4 @@
-name: .NET
+name: DevOps_Workflow
 
 on:
   push:
