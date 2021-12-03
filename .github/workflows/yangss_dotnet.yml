@@ -1,4 +1,4 @@
-name: yangss
+name: yangss_dotnet
 
 on:
   workflow_dispatch:
