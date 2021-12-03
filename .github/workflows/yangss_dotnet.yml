@@ -13,16 +13,14 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Run a one-line script
+      run: echo Hello, world!
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
     - name: Build
       run: dotnet build --no-restore
     - name: Test
