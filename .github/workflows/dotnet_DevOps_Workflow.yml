@@ -5,7 +5,7 @@ on:
     branches: [ DevOps_Branch_01 ]
     
 env:
-      GitHubPackageFeedUrl: https://nuget.pkg.github.com/(your-organisation-name)/index.json
+      GitHubPackageFeedUrl: https://nuget.pkg.github.com/abi-teams1/index.json
       LogicProjectPath: ${{ github.WORKSPACE }}/AnimalAdoption.Common.Logic
 
 jobs:
