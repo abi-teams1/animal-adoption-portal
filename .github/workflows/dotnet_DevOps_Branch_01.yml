@@ -48,7 +48,18 @@ jobs:
 #       uses: actions/download-artifact@v2
 #       with:
 #         name: a
-            
+#     - uses: Azure/webapps-deploy@v2
+#       with:
+#     # Name of the Azure Web App
+#        app-name: '웹앱리소스 이름'
+#     # Enter an existing Slot other than the Production slot
+#        slot-name: 'production'
+#     # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
+#        package: .
+
+
+
+## 기본 배포 이후에 추가작업
 #     - name: AzureLogin
 #       uses: azure/login@v1
 #       with:
