@@ -19,8 +19,10 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
-    - name: List out directory contents
-      run: echo "Listing the contents of the GitHub workspace directory"
+    - name: Run a multi-line script
+      run: |
+        echo Add other actions to build,
+        echo test, and deploy your project.
     - name: Build
       run: dotnet build --no-restore
     - name: Test
