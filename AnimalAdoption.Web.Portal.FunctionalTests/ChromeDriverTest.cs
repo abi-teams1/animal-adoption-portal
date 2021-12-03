@@ -24,6 +24,7 @@ namespace AnimalAdoption.Web.Portal.FunctionalTests
             {
                 PageLoadStrategy = PageLoadStrategy.Normal
             };
+            options.AddAdditionalCapability("excludeSwitches", "disable-default-apps");
             _driver = new ChromeDriver(options);
         }
 
