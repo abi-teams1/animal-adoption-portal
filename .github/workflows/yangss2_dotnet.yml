@@ -1,0 +1,36 @@
+name: yangss2
+
+on:
+  workflow_dispatch:
+#     inputs:
+#      name:
+#        description: 'Person to greet'
+#        required: true
+#        default: 'Mona the Octocat'
+#      home:
+#        description: 'location'
+#        required: false
+#        default: 'The Octoverse'
+  push:
+    branches: [ yangss ]
+#  pull_request:
+#    branches: [ yangss ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: test_print
+      run: echo Hello, world!
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
+    - name: Restore dependencies
+      run: dotnet restore
+    - name: Build
+      run: dotnet build --no-restore
+
