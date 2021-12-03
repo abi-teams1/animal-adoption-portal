@@ -20,12 +20,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore
     - name: List out directory contents
-      run: |
-          echo "Listing the contents of the GitHub workspace directory"
-          ls ${{ github.workspace }}
-
-          echo "Recursively listing all contents of the current directory"
-          ls -R
+      run: echo "Listing the contents of the GitHub workspace directory"
     - name: Build
       run: dotnet build --no-restore
     - name: Test
