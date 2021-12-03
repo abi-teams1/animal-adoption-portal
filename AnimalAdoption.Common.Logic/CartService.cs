@@ -61,7 +61,7 @@ namespace AnimalAdoption.Common.Logic
 
 
             var cartContents = allAnimals.Select(animal =>
-            {
+            { 
                 int quantity = 0;
                 domainCart?.CartContents.TryGetValue(animal.Id, out quantity);
                 return new CartContent
