@@ -44,7 +44,7 @@ namespace AnimalAdoption.Common.Logic
                     name = "Placeholder";
                     break;
             }
-            return name;aaaaa
+            return name;
         }
     }
 }
