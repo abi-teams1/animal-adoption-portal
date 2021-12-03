@@ -1,6 +1,7 @@
 name: yangss
 
 on:
+  workflow_dispatch:
   push:
     branches: [ yangss ]
 #  pull_request:
@@ -13,7 +14,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
+    - name: test_print
       run: echo Hello, world!
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
