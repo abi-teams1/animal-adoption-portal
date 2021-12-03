@@ -2,15 +2,15 @@ name: yangss2
 
 on:
   workflow_dispatch:
-    inputs:
-      name:
-        description: 'Person to greet'
-        required: true
-        default: 'Mona the Octocat'
-      home:
-        description: 'location'
-        required: false
-        default: 'The Octoverse'
+#     inputs:
+#      name:
+#        description: 'Person to greet'
+#        required: true
+#        default: 'Mona the Octocat'
+#      home:
+#        description: 'location'
+#        required: false
+#        default: 'The Octoverse'
   push:
     branches: [ yangss ]
 #  pull_request:
@@ -23,7 +23,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Run a one-line script
+    - name: test_print
       run: echo Hello, world!
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
