@@ -84,6 +84,7 @@ jobs:
     # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
        package: .
     
+## 기본 배포 이후에 추가작업
 #     - name: AzureLogin
 #       uses: azure/login@v1
 #       with:
