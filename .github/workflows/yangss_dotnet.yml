@@ -41,6 +41,8 @@ jobs:
        # A file, directory or wildcard pattern that describes what to upload
         path: ${{env.DOTNET_ROOT}}/animal-adoption-portal/*
        # The desired behavior if no files are found using the provided path.
+    - name: Check Uploading Artifact
+      run : ls ${{env.DOTNET_ROOT}}/animal-adoption-portal/*
 #   deploy:
 #     env:
 #       ResourceGroupName : test
@@ -63,6 +65,7 @@ jobs:
 #       uses: azure/login@v1
 #       with:
 #         creds: ${{ secrets.AZURE_CREDENTIALS }}
+##########################################################################
 #     - uses: Azure/get-keyvault-secrets@v1
 #       with:
 #         keyvault: "yuritest"
@@ -92,7 +95,7 @@ jobs:
 #     # Application settings using the JSON syntax set as value of secret variable: APP_SETTINGS
 #         app-settings-json: ${{ secrets.APP_SETTINGS }} 
 #         id: settings
-        
+##########################################################################        
 #     - uses: Azure/webapps-deploy@v2
 #       with:
 #     # Name of the Azure Web App
