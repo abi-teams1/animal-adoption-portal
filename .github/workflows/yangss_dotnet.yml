@@ -31,7 +31,9 @@ jobs:
     
     - name: Publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/animal-adoption-portal
-      
+
+    - name: Check Publish Artifact
+      run : ls ${{env.DOTNET_ROOT}}/animal-adoption-portal/*  
 
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
